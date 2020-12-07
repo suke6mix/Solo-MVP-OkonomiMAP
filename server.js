@@ -10,5 +10,5 @@ app.listen(port, () => {
 });
 
 app.use("/api", (req, res) => {
-    res.send("Hello Okonomi-yaki!");
+    res.send("Hello Okonomi-yaki!!");
 });
