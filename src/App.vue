@@ -1,18 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img class="topimage" alt="Okonomiyaki" src="../public/okonomiyaki.png">
+    <!--div>
+      <Map></Map>
+    </div-->
+    <div>
+      <Gurunavi></Gurunavi>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import Map from "./components/Map"
+import Gurunavi from "./components/Gurunavi"
 import axios from "axios";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    //Map,
+    Gurunavi,
   },
   mounted() {
     axios.get("/api").then((res) => {
@@ -31,4 +38,10 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.topimage {
+  width: 25vw;
+  height: auto;
+}
+
 </style>
